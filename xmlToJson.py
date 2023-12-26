@@ -112,22 +112,3 @@ Node parseXML(const std::string& xml) {
     }
     return root;
 }
-
-int main() {
-    std::string xml = R"(<users>
-  <user>
-  <ids>
-  <id>2</id>
-  <id>1</id>
-    </ids>
-  <test><lol></lol><hehe></hehe></test>
-  </user>
-</users>
-)";
-
-    Node root = parseXML(xml);
-
-    std::cout << root.toJSON() << std::endl; 
-
-    return 0;
-}
